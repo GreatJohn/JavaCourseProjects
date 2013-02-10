@@ -1,0 +1,14 @@
+Packages :
+1. task1(Echo)
+
+2. task2 - code
+
+3. testtasks - demos to test tasks from another package
+3.1 testtasks.CalcDemo - test calc from console or file (File src\com\jcourse\bogdanov\testtasks\file.txt contains some test commands.)
+3.2 testtasks.CalcDemoSQRTSolution - test calc for sqrt solution. File src\com\jcourse\bogdanov\testtasks\sqrt.txt contains necessary commands.
+3.3 testtasks.Calc2Demo -//-
+3.4 testtasks.Calc2DemoSQRT -//-
+
+4. calc.commands - calc with subpackage commands. (commands release as methods...)
+
+5 calc2 - new package, (commands release as classes...)
