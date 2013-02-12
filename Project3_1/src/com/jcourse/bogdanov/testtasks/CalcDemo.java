@@ -2,7 +2,6 @@ package com.jcourse.bogdanov.testtasks;
 
 import com.jcourse.bogdanov.calc.*;
 import com.jcourse.bogdanov.calc.commands.*;
-
 import java.util.*;
 
 
