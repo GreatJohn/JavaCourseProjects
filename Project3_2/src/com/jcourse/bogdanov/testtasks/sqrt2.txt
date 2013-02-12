@@ -1,0 +1,18 @@
+PUSH -1.0
+PUSH b
+*
+PUSH b
+PUSH b
+*
+PUSH 4.0
+PUSH a
+*
+PUSH c
+*
+-
+SQRT
+-
+PUSH 2.0
+PUSH a
+*
+/
