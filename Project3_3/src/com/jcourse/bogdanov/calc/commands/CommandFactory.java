@@ -43,10 +43,15 @@ public class CommandFactory {
                 this.proxied = inProxied;
             }
             public Object invoke (Object proxy, Method method, Object[] args) throws Throwable{
+                Object obj = null;
                 if(method.getName().equals("exec")){
-                    //do something
+                    System.out.println("DEBUG : Stack before " + stack.toString());
+                    obj =  method.invoke(proxied,args);
+                    System.out.println("DEBUG : Stack after " + stack.toString());
                 }
-                return method.invoke(proxied,args);
+                else
+                    obj =  method.invoke(proxied,args);
+                return obj;
             }
         }
         try {

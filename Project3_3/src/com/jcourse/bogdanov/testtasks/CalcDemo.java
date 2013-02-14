@@ -7,10 +7,11 @@ import com.jcourse.bogdanov.calc.InputCmd;
 import com.jcourse.bogdanov.calc.commands.CalcCommandsException;
 import com.jcourse.bogdanov.calc.commands.CommandFactory;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +28,6 @@ public class CalcDemo {
                 cmd = cf.getCmdClass(strCmd);
                 try {
                     /*
-                    log.trace("log starts...");
                     try {
                         log.trace(cmd.getClass().getField("stack").toString());
                     } catch (NoSuchFieldException e) {
@@ -42,7 +42,7 @@ public class CalcDemo {
             }
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException,SQLException {
 
         Double a;
         Double b;
