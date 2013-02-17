@@ -2,7 +2,8 @@ Projects:
 FirstProject - first project with many packages
 Project3_1 - project solution for seminar 3.1
 Project3_2 - project solution for seminar 3.2 with annotations. Add console iteractive & trow exceptions.
-Project3_3 - project solution for seminar 3.3 with Proxy object.
+Project3_3 - project solution for seminar 3.3 with Proxy object. Add DEBUG as System.out in invoke method - log4j not work...
+Project4   - project solution for seminar 4. Realization in HashMap Comparator & Arrays.sort()...
 
 Packages :
 calc - stack calculator
