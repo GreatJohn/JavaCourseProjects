@@ -1,10 +1,10 @@
 package com.jcourse.bogdanov.calc.commands;
 
-import java.util.LinkedList;
+import java.util.Deque;
 
 public class Div extends CommandExec {
     @In(arg = "stack")
-    LinkedList<Double> stack;
+    private Deque<Double> stack;
     public void exec(String inCommand) throws CalcCommandsException{
         Double d1,d2;
         if (stack.size() >1){

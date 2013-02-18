@@ -1,63 +1,121 @@
 package com.jcourse.bogdanov.testtasks;
 
-import com.jcourse.bogdanov.calc.Cmd;
-import com.jcourse.bogdanov.calc.ConsoleReceiver;
-import com.jcourse.bogdanov.calc.FileReceiver;
-import com.jcourse.bogdanov.calc.InputCmd;
+import com.jcourse.bogdanov.calc.*;
 import com.jcourse.bogdanov.calc.commands.CalcCommandsException;
 import com.jcourse.bogdanov.calc.commands.CommandFactory;
-
-//import org.apache.log4j.Logger;
+import com.jcourse.bogdanov.calc.commands.In;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class CalcDemo {
-    //static Logger log = Logger.getLogger(CalcDemo.class.getName());
-    public static void consoleExec(){
-        System.out.println("Enter commands(type ';' to abort):");
-        InputCmd rec = new ConsoleReceiver().getInputCmd();
-        String strCmd;
-        Cmd cmd;
-        CommandFactory cf = new CommandFactory();
-        while(!(strCmd = rec.getNextString()).contains(";")){
-            if (!strCmd.isEmpty()){
-                cmd = cf.getCmdClass(strCmd);
-                try {
-                    /*
-                    try {
-                        log.trace(cmd.getClass().getField("stack").toString());
-                    } catch (NoSuchFieldException e) {
-                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                    }
-                    */
-                    cmd.exec(strCmd);
-                    System.out.println("Executed command = " + strCmd);
-                } catch (CalcCommandsException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            }
+class Parser {
+    public static String getFirst(String inCommand){
+        StringTokenizer st = new StringTokenizer(inCommand, " ");
+        int count = st.countTokens();
+        if (count > 0 ){
+            return st.nextToken();
+        }
+        else {
+            return null;
         }
     }
-    public static void main(String[] args) throws IOException,SQLException {
+    static StringTokenizer getTokenizer(String inCommand){
+        return (new StringTokenizer(inCommand, " "));
+    }
+}
+public class CalcDemo {
+    public static void main(String[] args) throws IOException,SQLException { // no args - console input, or sqrt1.txt & sqrt2.txt for SQRT solution
 
+        final Deque<Double> stackMain = new LinkedList<>();
+        final Map<String, Double> mapMain = new HashMap<>();
         Double a;
         Double b;
         Double c;
         boolean negativeD = true;
         boolean twoSQRT = true;
-        CommandFactory cf = new CommandFactory();
+        String className;
+
+        try(
+            InputStream in = CalcDemo.class.getResourceAsStream("log4j.properties")){
+            Properties p = new Properties();
+            p.load(in);
+            PropertyConfigurator.configure(p);
+        }catch(Exception e) {
+            throw new RuntimeException("static init block of CommandFactory fail! (unable to load 'log4j.properties' for DEBUG) (" + e.getMessage() + ")");
+        }
+        class MethodSelector implements InvocationHandler {
+            private Object proxied;
+            Logger log = Logger.getLogger(Cmd.class.getName());
+            MethodSelector(Object inProxied){
+                this.proxied = inProxied;
+                log = Logger.getLogger(proxied.getClass());
+            }
+            public Object invoke (Object proxy, Method method, Object[] args) throws Throwable{
+                Object obj;
+                if(method.getName().equals("exec")){
+                    log.debug("DEBUG : Stack before = " + stackMain);
+                    log.debug("DEBUG : args = " + args[0]);
+                    log.debug("DEBUG : map before = " + mapMain.entrySet().toString());
+                    obj =  method.invoke(proxied,args);
+                    log.debug("DEBUG : map after = " + mapMain.entrySet().toString());
+                    log.debug("DEBUG : Stack after" + stackMain);
+                }
+                else
+                    throw new RuntimeException("MethodSelector : Try to execute unknown method! (" + method.getName() + ")");
+                return obj;
+            }
+        }
+
+        CommandFactory cf = new CommandFactory(new CmdInitiator(){
+            final Deque<Double> stack = stackMain;
+            Map<String, Double> map = mapMain;
+            @Override
+            public void initCmd(Cmd cmd) {
+                try {
+                    for(Field f : cmd.getClass().getDeclaredFields()){
+                        if (f.getAnnotation(In.class).arg().equals("stack")) {
+                            f.setAccessible(true);
+                            f.set(cmd,stack);
+                        }
+                        if (f.getAnnotation(In.class).arg().equals("map")) {
+                            f.setAccessible(true);
+                            f.set(cmd,map);
+                        }
+                    }
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException("Unable to access fields of class! (" + cmd.getClass().getName()  + "), "  + e.getMessage() + ")");
+                }
+            }
+        });
         String strCmd;
         Cmd cmd;
         InputCmd rec = null;
 
         if (args.length == 0) {
-            consoleExec();
-            System.exit(0);
+            System.out.println("Enter commands(type ';' to abort):");
+            rec = new ConsoleReceiver().getInputCmd();
+            while(!(strCmd = rec.getNextString()).contains(";")){
+                if (!strCmd.isEmpty()){
+                    className = Parser.getFirst(strCmd);
+                    cmd = cf.getProxy(new MethodSelector(cf.getCmdClass(className)));
+                    try {
+                        cmd.exec(strCmd);
+                        System.out.println("Executed command = " + strCmd);
+                    } catch (CalcCommandsException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+                }
+            }
         }
+
         else {
             try {
                 rec = new FileReceiver(args[0]).getInputCmd();
@@ -104,9 +162,9 @@ public class CalcDemo {
             }
             try {
                 while((strCmd = rec.getNextString())!=null){
-                    cmd = cf.getCmdClass(strCmd);
+                    className = Parser.getFirst(strCmd);
+                    cmd = cf.getCmdClass(className);
                     cmd.exec(strCmd);
-                    System.out.println("Executed command = " + strCmd);
                 }
                 if (!twoSQRT) {
                     System.out.print("X = ");
@@ -123,9 +181,9 @@ public class CalcDemo {
                         e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     }
                     while((strCmd = rec.getNextString())!=null){
-                        cmd = cf.getCmdClass(strCmd);
+                        className = Parser.getFirst(strCmd);
+                        cmd = cf.getCmdClass(className);
                         cmd.exec(strCmd);
-                        System.out.println("Executed command = " + strCmd);
                     }
                     System.out.print("X2 = ");
                     cmd = cf.getCmdClass("PRINT");
@@ -135,6 +193,5 @@ public class CalcDemo {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
         }
-
     }
 }

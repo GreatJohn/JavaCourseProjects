@@ -1,82 +1,55 @@
 package com.jcourse.bogdanov.calc.commands;
 
 import com.jcourse.bogdanov.calc.Cmd;
+import com.jcourse.bogdanov.calc.CmdInitiator;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Properties;
 
 public class CommandFactory {
-    private static Properties prop = new Properties();
-    @In(arg = "stack")
-    LinkedList<Double> stack;
-    @In(arg = "map")
-    Map<String,Double> map;
-
+    private static final Properties prop = new Properties();
+    private final Map<String, Cmd> commands = new HashMap<>();
+    private final CmdInitiator initCmd;
     static {
         try {
-            InputStream in = CommandFactory.class.getResourceAsStream("cmd.properties");
+            InputStream in = CommandFactory.class.getResourceAsStream("cmd.properties.xml");
             prop.loadFromXML(in);
             in.close();
         } catch (IOException e) {
-            throw new RuntimeException("static init block of CommandFactory fail! (" + e.getMessage() + ")");
+            throw new RuntimeException("static init block of CommandFactory fail! (unable to load 'cmd.properties.xml' for command classes initiation) (" + e.getMessage() + ")");
         }
     }
-    public CommandFactory(){
-        stack = new LinkedList<>();
-        map = new HashMap<>();
+    public CommandFactory(CmdInitiator initCmd){
+        this.initCmd = initCmd;
+        initMapCmd();
+    }
+    private void initMapCmd(){
+        for(String cmdName : prop.stringPropertyNames()) {
+            String cmdClassName = prop.getProperty(cmdName);
+            Cmd cmd;
+            try {
+                Class c = Class.forName(cmdClassName);
+                cmd = (Cmd) c.newInstance();
+                initCmd.initCmd(cmd);
+                commands.put(cmdName,cmd);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException("initMapCmd(): Unable to find class to init! (" + cmdClassName + "), "  + e.getMessage() + ")");
+            } catch (InstantiationException e) {
+                throw new RuntimeException("Unable to instantiate class! (" + cmdClassName + "), "  + e.getMessage() + ")");
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException("Unable to access fields of class! (" + cmdClassName + "), "  + e.getMessage() + ")");
+            }
+        }
     }
     public Cmd getCmdClass(String cmdName){
-        String className = prop.getProperty(Parser.getFirst(cmdName));
-        Cmd cmd;
-        Cmd proxy;
-        class MethodSelector implements InvocationHandler{
-            private Object proxied;
-            MethodSelector(Object inProxied){
-                this.proxied = inProxied;
-            }
-            public Object invoke (Object proxy, Method method, Object[] args) throws Throwable{
-                Object obj = null;
-                if(method.getName().equals("exec")){
-                    System.out.println("DEBUG : Stack before " + stack.toString());
-                    obj =  method.invoke(proxied,args);
-                    System.out.println("DEBUG : Stack after " + stack.toString());
-                }
-                else
-                    obj =  method.invoke(proxied,args);
-                return obj;
-            }
-        }
-        try {
-            Class c = Class.forName(className);
-            cmd = (Cmd) c.newInstance();
-            for(Field f : cmd.getClass().getDeclaredFields()){
-                if (f.getAnnotation(In.class).arg().equals("stack")) {
-                    f.set(cmd,stack);
-                    f.setAccessible(true);
-                }
-                if (f.getAnnotation(In.class).arg().equals("map")) {
-                    f.set(cmd,map);
-                    f.setAccessible(true);
-                }
-            }
-
-            proxy = (Cmd) Proxy.newProxyInstance(Cmd.class.getClassLoader(),new Class[]{Cmd.class}, new MethodSelector(cmd));
-
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Unable to find class! (" + className + "), "  + e.getMessage() + ")");
-        } catch (InstantiationException e) {
-            throw new RuntimeException("Unable to instantiate class! (" + className + "), "  + e.getMessage() + ")");
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException("Unable to access fields of class! (" + className + "), "  + e.getMessage() + ")");
-        }
-        return proxy;
+        return this.commands.get(cmdName);
+    }
+    public Cmd getProxy(InvocationHandler ih){
+        return (Cmd) Proxy.newProxyInstance(Cmd.class.getClassLoader(),new Class[]{Cmd.class}, ih);
     }
 }

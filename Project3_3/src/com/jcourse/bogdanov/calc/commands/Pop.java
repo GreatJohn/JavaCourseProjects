@@ -1,10 +1,10 @@
 package com.jcourse.bogdanov.calc.commands;
 
-import java.util.LinkedList;
+import java.util.Deque;
 
 public class Pop extends CommandExec {
     @In(arg = "stack")
-    LinkedList<Double> stack;
+    private Deque<Double> stack;
     public void exec(String inCommand) throws CalcCommandsException{
         if (stack.size()>0){
             stack.removeLast();

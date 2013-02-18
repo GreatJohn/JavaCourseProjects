@@ -1,15 +1,15 @@
 package com.jcourse.bogdanov.calc.commands;
 
-import java.util.LinkedList;
+import java.util.Deque;
 import java.util.Map;
 import java.util.StringTokenizer;
 
 
 public class Define extends CommandExec {
     @In(arg = "stack")
-    LinkedList<Double> stack;
+    private Deque<Double> stack;
     @In(arg = "map")
-    Map<String,Double> map;
+    private Map<String,Double> map;
     public void exec(String inCommand) throws CalcCommandsException {
         StringTokenizer st = Parser.getTokenizer(inCommand);
         int count = st.countTokens();
