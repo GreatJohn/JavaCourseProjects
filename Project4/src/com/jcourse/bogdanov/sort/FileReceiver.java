@@ -3,9 +3,9 @@ package com.jcourse.bogdanov.sort;
 import java.io.*;
 import java.util.*;
 
-public class FileReceiver implements SortReader {
-    private static int totalCounter = 0;// counter all words in input
-    public static int getTotalCounter() {
+public class FileReceiver {
+    private int totalCounter = 0;// counter all words in input
+    public int getTotalCounter() {
         return totalCounter;
     }
     public Map<String,WordCounter> readInput(Reader r){
@@ -40,7 +40,7 @@ public class FileReceiver implements SortReader {
             }
             return map;
         } catch (IOException e){
-            throw new RuntimeException("Unable to execute method readInput()! (" + e.getMessage() + ")");
+            throw new RuntimeException("Unable to execute method readInput()!" + e);
         }
     }
 }
