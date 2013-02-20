@@ -9,28 +9,28 @@ public class FileReceiver implements InputCmd {
 
     private BufferedReader br;
 
-    public FileReceiver(String fileName) throws FileNotFoundException{
-        try{
+    public FileReceiver(String fileName) throws FileNotFoundException {
+        try {
             br = new BufferedReader(new FileReader(fileName));
-        } catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             throw new FileNotFoundException("Unable to open file(" + fileName + ")! (" + e.getMessage() + ")");
         }
     }
 
-    public InputCmd getInputCmd(){
+    public InputCmd getInputCmd() {
         return this;
     }
 
-    public String getNextString(){
-        String s,sTrimmed;
+    public String getNextString() {
+        String s, sTrimmed;
         try {
             s = br.readLine();
             if (s == null) {
                 return null;
             }
             sTrimmed = s.trim();
-            return  sTrimmed;
-        } catch (IOException e){
+            return sTrimmed;
+        } catch (IOException e) {
             throw new RuntimeException("Unable to execute method readLine()! (" + e.getMessage() + ")");
         }
     }

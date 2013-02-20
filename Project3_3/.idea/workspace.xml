@@ -13,7 +13,7 @@
     <file path="/GameDemo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359688683843" ignored="false" />
     <file path="/fragment.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361213574656" ignored="false" />
     <file path="/Game.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359689010140" ignored="false" />
-    <file path="/Dummy.txt" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361327174515" ignored="false" />
+    <file path="/Dummy.txt" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361345417578" ignored="false" />
     <file path="/Receiver.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360741335859" ignored="false" />
     <file path="/CommandExec.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360594141343" ignored="false" />
     <file path="/CommandList.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359953020781" ignored="false" />
@@ -60,7 +60,7 @@
     <file path="/FileReceiver.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360977287593" ignored="false" />
     <file path="$PROJECT_DIR$/../Project3_2/.idea/workspace.xml" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360649327687" ignored="false" />
     <file path="$PROJECT_DIR$/../Project4/src/com/jcourse/bogdanov/testtasks/Demo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360977674015" ignored="false" />
-    <file path="/Demo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360977271906" ignored="false" />
+    <file path="/Demo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361334122468" ignored="false" />
     <file path="$PROJECT_DIR$/../Project4/src/com/jcourse/bogdanov/calc/FileReceiver.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360741241703" ignored="false" />
     <file path="$PROJECT_DIR$/../Project4/src/com/jcourse/bogdanov/calc/Cmd.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360740324609" ignored="false" />
     <file path="$PROJECT_DIR$/../Project4/src/com/jcourse/bogdanov/calc/Convertor.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360740623484" ignored="false" />
@@ -79,6 +79,12 @@
     <file path="$PROJECT_DIR$/../Project4/src/com/jcourse/bogdanov/sort/Data.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360978129828" ignored="false" />
     <file path="/Data.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360975286078" ignored="false" />
     <file path="/log4jExample.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360980983140" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project5_1/src/com/jcourse/bogdanov/testtasks/Demo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361334152921" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project5_1/.idea/workspace.xml" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361334293062" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project5_1/src/com/jcourse/bogdanov/except/MyException.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361332873437" ignored="false" />
+    <file path="/MyException.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361332870968" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project5_2/src/com/jcourse/bogdanov/html/DirTreeGenerator.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361339568031" ignored="false" />
+    <file path="/DirTreeGenerator.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361339552328" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +99,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -127,7 +134,6 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -150,10 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalcDemo.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CalcDemo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/testtasks/CalcDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="37" selection-start="7124" selection-end="7124" vertical-scroll-proportion="0.0">
+            <state line="18" column="6" selection-start="585" selection-end="585" vertical-scroll-proportion="0.07816092">
               <folding />
             </state>
           </provider>
@@ -168,19 +174,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CommandFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommandExec.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CommandExec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="6" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+            <state line="10" column="6" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,7 +186,7 @@
       <file leaf-file-name="CalcCommandsException.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CalcCommandsException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="45" selection-end="169" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,10 +201,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileReceiver.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileReceiver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/FileReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.23448277">
+            <state line="13" column="44" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -237,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Mult.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Plus.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Pop.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Print.java" />
@@ -253,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Minus.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/testtasks/CalcDemo.java" />
         <option value="$PROJECT_DIR$/log.out" />
+        <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/FileReceiver.java" />
       </list>
     </option>
   </component>
@@ -304,6 +301,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -398,17 +406,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,13 +422,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Documents and Settings\Admin\IdeaProjects\Project3_3\lib" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\Documents and Settings\Admin\IdeaProjects\Project3_3\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -660,13 +657,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/FileReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/Define.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
@@ -710,23 +700,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CalcCommandsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CommandFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CommandExec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+        <state line="10" column="6" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -738,6 +714,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CalcCommandsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="45" selection-end="169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/commands/CommandFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="526" selection-end="526" vertical-scroll-proportion="0.12068965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="11" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/FileReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/testtasks/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
@@ -745,23 +754,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/calc/FileReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.23448277">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/testtasks/CalcDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="37" selection-start="7124" selection-end="7124" vertical-scroll-proportion="0.0">
+        <state line="18" column="6" selection-start="585" selection-end="585" vertical-scroll-proportion="0.07816092">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.out">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
   </component>

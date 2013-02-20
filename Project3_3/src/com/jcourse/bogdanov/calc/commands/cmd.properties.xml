@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<comment>add put</comment>
-<entry key="-">com.jcourse.bogdanov.calc.commands.Minus</entry>
-<entry key="+">com.jcourse.bogdanov.calc.commands.Plus</entry>
-<entry key="DEFINE">com.jcourse.bogdanov.calc.commands.Define</entry>
-<entry key="*">com.jcourse.bogdanov.calc.commands.Mult</entry>
-<entry key="POP">com.jcourse.bogdanov.calc.commands.Pop</entry>
-<entry key="#">com.jcourse.bogdanov.calc.commands.Comments</entry>
-<entry key="PUSH">com.jcourse.bogdanov.calc.commands.Push</entry>
-<entry key="PRINT">com.jcourse.bogdanov.calc.commands.Print</entry>
-<entry key="SQRT">com.jcourse.bogdanov.calc.commands.Sqrt</entry>
-<entry key="/">com.jcourse.bogdanov.calc.commands.Div</entry>
-<entry key="EXP">com.jcourse.bogdanov.calc.commands.Exp</entry>
-<entry key="LOG">com.jcourse.bogdanov.calc.commands.Log</entry>
+    <comment>add put</comment>
+    <entry key="-">com.jcourse.bogdanov.calc.commands.Minus</entry>
+    <entry key="+">com.jcourse.bogdanov.calc.commands.Plus</entry>
+    <entry key="DEFINE">com.jcourse.bogdanov.calc.commands.Define</entry>
+    <entry key="*">com.jcourse.bogdanov.calc.commands.Mult</entry>
+    <entry key="POP">com.jcourse.bogdanov.calc.commands.Pop</entry>
+    <entry key="#">com.jcourse.bogdanov.calc.commands.Comments</entry>
+    <entry key="PUSH">com.jcourse.bogdanov.calc.commands.Push</entry>
+    <entry key="PRINT">com.jcourse.bogdanov.calc.commands.Print</entry>
+    <entry key="SQRT">com.jcourse.bogdanov.calc.commands.Sqrt</entry>
+    <entry key="/">com.jcourse.bogdanov.calc.commands.Div</entry>
+    <entry key="EXP">com.jcourse.bogdanov.calc.commands.Exp</entry>
+    <entry key="LOG">com.jcourse.bogdanov.calc.commands.Log</entry>
 </properties>
