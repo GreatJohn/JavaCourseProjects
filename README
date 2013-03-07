@@ -6,4 +6,5 @@ Project3_3 - project solution for seminar 3.3 with Proxy object. Add log4j for d
 Project4   - project solution for seminar 4. Realization in HashMap Comparator & Arrays.sort()...
 Project5_1 - project solution for seminar 5.1 - generate Exceptions
 Project5_2 - project solution for seminar 5.2 - generate HTML for directory
-Project5_3 - project solution for seminar 5.3 - generate HTML-tree for browser
+Project5_3 - project solution for seminar 5.3 - generate HTML-tree for browser(activation.jar needed to correct execute in project lib subdir)
+Project6   - project solution for seminar 6 - create guestbook in H2 DB, display to console

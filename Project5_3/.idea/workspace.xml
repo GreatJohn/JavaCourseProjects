@@ -13,7 +13,7 @@
     <file path="/GameDemo.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359688683843" ignored="false" />
     <file path="/fragment.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362372665968" ignored="false" />
     <file path="/Game.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359689010140" ignored="false" />
-    <file path="/Dummy.txt" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362369298515" ignored="false" />
+    <file path="/Dummy.txt" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362624318156" ignored="false" />
     <file path="/Receiver.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360741418031" ignored="false" />
     <file path="/CommandExec.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1360594141343" ignored="false" />
     <file path="/CommandList.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1359953020781" ignored="false" />
@@ -99,11 +99,16 @@
     <file path="$PROJECT_DIR$/../Project3_3/src/com/jcourse/bogdanov/calc/InputCmd.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361345443437" ignored="false" />
     <file path="$PROJECT_DIR$/../Project3_3/src/com/jcourse/bogdanov/calc/FileReceiver.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361345443437" ignored="false" />
     <file path="/HTMLGenerator.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361847042543" ignored="false" />
-    <file path="/TCPServer.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362375328859" ignored="false" />
+    <file path="/TCPServer.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362561927578" ignored="false" />
     <file path="/Get.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361866701011" ignored="false" />
     <file path="/GetResource.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362109453765" ignored="false" />
     <file path="/TCPClient.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1361940537609" ignored="false" />
-    <file path="/Resource.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362375580125" ignored="false" />
+    <file path="/Resource.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362561157234" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project6/src/main/java/group/App.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362447088062" ignored="false" />
+    <file path="/App.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362446523406" ignored="false" />
+    <file path="$PROJECT_DIR$/../Project6/.idea/workspace.xml" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362541631203" ignored="false" />
+    <file path="/test.java" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362544107781" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="3dab10df-f5f7-4334-86af-a3252e66d1e5" time="1362625390265" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +116,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -118,7 +128,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -154,6 +163,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -170,48 +180,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MimetypesFileTypeMap.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/jre/lib/rt.jar!/javax/activation/MimetypesFileTypeMap.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="58" selection-start="1151" selection-end="1181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TCPServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/TCPServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SortByName.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/SortByName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Thread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="721" column="0" selection-start="26865" selection-end="26865" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resource.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Resource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="-0.8008475">
+            <state line="39" column="37" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -219,28 +191,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="File.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/File.java">
+      <file leaf-file-name="TCPServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/TCPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="484" column="18" selection-start="20204" selection-end="20204" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileSystem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/FileSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="18" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/MyException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+            <state line="84" column="75" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.56082475">
               <folding />
             </state>
           </provider>
@@ -270,7 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/sort/FileReceiver.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/sort/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/except/ExceptionGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/except/MyException.java" />
@@ -284,10 +237,14 @@
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/html/DirTreeGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/html/GetResource.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/testtasks/Demo.java" />
+        <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/html/test.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/html/TCPServer.java" />
         <option value="$PROJECT_DIR$/src/com/jcourse/bogdanov/html/Resource.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="2" />
@@ -337,6 +294,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -372,50 +330,6 @@
               <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPServer.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project5_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project5_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project5_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project5_3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -429,18 +343,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propGUI" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project5_3_old" />
+    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/activation.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -466,14 +380,15 @@
       <recent name="C:\Documents and Settings\Admin\IdeaProjects\MyProject\src\com\jcourse\bogdanov\calc3" />
       <recent name="C:\Documents and Settings\Admin\IdeaProjects\MyProject\src\com\jcourse\bogdanov\Task2_Work" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1" />
-      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1\src" />
-      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1\src\com\jcourse\bogdanov\calc3\commands" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jcourse.bogdanov.Task2_Work" />
       <recent name="com.jcourse.bogdanov" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project5_3\lib" />
+      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1" />
+      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1\src" />
+      <recent name="C:\Documents and Settings\Admin\IdeaProjects\Project3_1\src\com\jcourse\bogdanov\calc3\commands" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TCPServer">
@@ -546,6 +461,23 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="test" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.jcourse.bogdanov.html.test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Project5_3" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -584,17 +516,19 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Demo" />
       <item index="1" class="java.lang.String" itemvalue="Application.DirTreeGenerator" />
       <item index="2" class="java.lang.String" itemvalue="Application.TCPServer" />
       <item index="3" class="java.lang.String" itemvalue="Application.TCPClient" />
+      <item index="4" class="java.lang.String" itemvalue="Application.test" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.TCPServer" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TCPClient" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DirTreeGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TCPClient" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DirTreeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -665,7 +599,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299025" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24972914" sideWeight="0.5703125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -752,109 +686,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/util/Arrays.java">
+    <entry file="file://$PROJECT_DIR$/.idea/description.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2269" column="25" selection-start="99585" selection-end="99585" vertical-scroll-proportion="0.5091954" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3841" column="30" selection-start="149475" selection-end="149475" vertical-scroll-proportion="0.62643677" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="16" selection-start="2523" selection-end="2523" vertical-scroll-proportion="0.5989583" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="901" column="24" selection-start="35277" selection-end="35277" vertical-scroll-proportion="0.6875" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/FileSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/net/SocketOutputStream.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/BufferedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="0" selection-start="3780" selection-end="3780" vertical-scroll-proportion="0.33195877" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="721" column="0" selection-start="26865" selection-end="26865" vertical-scroll-proportion="0.0">
+        <state line="98" column="18" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/MyException.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/ByteArrayInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+        <state line="102" column="11" selection-start="2836" selection-end="2836" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/System.java">
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="487" column="30" selection-start="19231" selection-end="19231" vertical-scroll-proportion="0.5080275">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/io/File.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="484" column="18" selection-start="20204" selection-end="20204" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/.idea/.name">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2074" column="19" selection-start="81746" selection-end="81746" vertical-scroll-proportion="0.7525773">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/jre/lib/rt.jar!/javax/activation/MimetypesFileTypeMap.class">
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="58" selection-start="1151" selection-end="1181" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/StringBuilder.java">
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="18" selection-start="11658" selection-end="11658" vertical-scroll-proportion="0.4371134">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/TCPServer.java">
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/SortByName.java">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/ant.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/activation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="241" selection-end="241" vertical-scroll-proportion="-0.8008475">
+        <state line="39" column="37" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcourse/bogdanov/html/TCPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="75" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.56082475">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,6 +877,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>activation</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

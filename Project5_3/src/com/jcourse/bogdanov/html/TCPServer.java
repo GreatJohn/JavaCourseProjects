@@ -59,7 +59,7 @@ class RequestProcessor implements Runnable {
                 sb.append((char) c);
             }
             String data = sb.toString();
-            if ((data == null) || (data.length() == 0)) {
+            if (data.length() == 0) {
                 data = "GET /";
             }
             String[] args = data.split(" ");
@@ -71,11 +71,20 @@ class RequestProcessor implements Runnable {
             } catch (NullPointerException e) {
                 // do nothing use defaults
             }
-
             Resource gr = new Resource(cmd, file.getPath(), resourcePath.replaceAll("%20", " "), s.getLocalAddress() + ":" + s.getLocalPort());
-            byte[] b = gr.get();
-            output.write(b);
-            output.flush();
+            try
+                    (InputStream in = gr.getIS();
+                     BufferedInputStream bis = new BufferedInputStream(in);
+                     BufferedOutputStream bos = new BufferedOutputStream(output);) {
+                byte buf[] = new byte[4096];
+                int count;
+                while ((count = bis.read(buf)) >= 0) {
+                    bos.write(buf, 0, count);
+                    bos.flush();
+                }
+
+            }
+
             System.out.println("Processor finished.");
         } catch (IOException ex) {
             ex.printStackTrace();

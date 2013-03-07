@@ -1,9 +1,7 @@
 package com.jcourse.bogdanov.html;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.IOException;
+import javax.activation.MimetypesFileTypeMap;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -16,51 +14,49 @@ public class Resource {
     private String localPath;
     private String serverAndPort;
     private String cmd;
-    SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+    private SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 
     public Resource(String cmd, String base, String file, String serverAndPort) {
         this.serverAndPort = serverAndPort;
         this.cmd = cmd;
         this.resource = new File((base + file).replace('\\', '/'));
         this.localPath = file;
-        if (!resource.exists()) {
-            status = "HTTP/1.1 404 File Not Found";
-            statusOK = false;
+        if (!this.resource.exists()) {
+            this.status = "HTTP/1.1 404 File Not Found";
+            this.statusOK = false;
             this.contents = "";
         } else if ((cmd.compareTo("GET") != 0) && ((cmd.compareTo("HEAD") != 0))) {
-            status = "HTTP/1.1 501 Not Implemented";
-            statusOK = false;
+            this.status = "HTTP/1.1 501 Not Implemented";
+            this.statusOK = false;
             this.contents = "";
         }
     }
 
-    public byte[] get() {
-        byte[] gb = getBody();
-        byte[] gc = getContents();
-        byte[] gs = getStatus();
-        byte[] result = null;
+    public InputStream getIS() {
+        InputStream gb = getBody();
+        InputStream gc = getContents();
+        InputStream gs = getStatus();
+        InputStream result = gs;
+        if (!statusOK) return result;
+
         switch (cmd) {
             case "HEAD":
-                result = new byte[gs.length + gc.length];
-                System.arraycopy(gs, 0, result, 0, gs.length);
                 if (statusOK) {
-                    System.arraycopy(gc, 0, result, gs.length, gc.length);
+                    result = new SequenceInputStream(gs, gc);
                 }
                 break;
             case "GET":
-                result = new byte[gs.length + gc.length + gb.length];
-                System.arraycopy(gs, 0, result, 0, gs.length);
                 if (statusOK) {
-                    System.arraycopy(gc, 0, result, gs.length, gc.length);
-                    System.arraycopy(gb, 0, result, gs.length + gc.length, gb.length);
+                    InputStream tmp = new SequenceInputStream(gs, gc);
+                    result = new SequenceInputStream(tmp, gb);
                 }
                 break;
         }
         return result;
     }
 
-    private byte[] getBody() {
-        byte[] result;
+    private InputStream getBody() {
+        InputStream result;
 
         try {
 
@@ -88,39 +84,31 @@ public class Resource {
 
     }
 
-    private byte[] getContents() {
-        if (statusOK) return this.contents.getBytes();
+    private InputStream getContents() {
+        if (statusOK) return new DataInputStream(new ByteArrayInputStream(this.contents.getBytes()));
         return null;
     }
 
-    private byte[] getStatus() {
-        if (statusOK) return ("HTTP/1.1 200 OK\r\n".getBytes());
-        return (this.status + "\r\n").getBytes();
+    private InputStream getStatus() {
+        if (statusOK) return new DataInputStream(new ByteArrayInputStream("HTTP/1.1 200 OK\r\n".getBytes()));
+        return new DataInputStream(new ByteArrayInputStream((this.status + "\r\n").getBytes()));
     }
 
-    private byte[] getResource(File file) throws MyException { //return file or index.html as page
+    private InputStream getResource(File file) throws MyException { //return file or index.html as page
         long fileLen = file.length();
         if (fileLen > Integer.MAX_VALUE) {
-            throw new MyException("File size too big! " + resource.length());
+            throw new MyException("File size too big! " + fileLen);
         }
-        int arrayLen = (int) fileLen;
-        byte[] result = new byte[arrayLen];
-        try
-                (FileInputStream fis = new FileInputStream(file);) {
-            fis.read(result);
+        try {
             Date d = new Date(file.lastModified());
-            if (resource.getName().compareTo("index.html") == 0) {
-                this.contents = "Content-Type: text/html\r\nContent-Length: " + file.length() + "\r\nLast-Modified: " + formatDate.format(d) + "\r\n\r\n";
-            } else {
-                this.contents = "Content-Type: application/octet-stream\r\nContent-Length: " + file.length() + "\r\nLast-Modified: " + formatDate.format(d) + "\r\n\r\n";
-            }
-            return result;
+            this.contents = "Content-Type: " + new MimetypesFileTypeMap().getContentType(file) + "\r\nContent-Length: " + fileLen + "\r\nLast-Modified: " + formatDate.format(d) + "\r\n\r\n";
+            return new FileInputStream(file);
         } catch (IOException e) {
             throw new MyException("IOException! " + resource.getPath());
         }
     }
 
-    private byte[] getResource() throws MyException {//return new HTML
+    private InputStream getResource() throws MyException {//return new HTML
 
 
         StringBuilder sb = new StringBuilder("<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n<HTML>\n<HEAD>\n<TITLE>Contents " + localPath + "</TITLE>\n</HEAD>\n<BODY>\n<H2>Contents " + localPath + "</H2>\n<HR>\n<PRE>");
@@ -128,17 +116,17 @@ public class Resource {
 
         File[] dirs = resource.listFiles(new SubDirs());
         Arrays.sort(dirs, new SortByName());
-        for (int i = 0; i < dirs.length; i++) {
-            Date d = new Date(dirs[i].lastModified());
-            sb.append("<TR>\n<TD WIDTH = \"20%\">" + formatDate.format(d) + "</TD>\n<TD WIDTH = \"20%\" ALIGN=\"CENTER\">DIRECTORY</TD>\n<TD WIDTH = \"40%\"><A HREF=" + "\"http:/" + serverAndPort + (localPath + dirs[i].getName()).replace('\\', '/').replaceAll(" ", "%20") + "/" + "\"" + "<B>" + dirs[i].getName() + "</B></A></TD>\n</TR>\n");
+        for (File dir : dirs) {
+            Date d = new Date(dir.lastModified());
+            sb.append("<TR>\n<TD WIDTH = \"20%\">" + formatDate.format(d) + "</TD>\n<TD WIDTH = \"20%\" ALIGN=\"CENTER\">DIRECTORY</TD>\n<TD WIDTH = \"40%\"><A HREF=" + "\"http:/" + serverAndPort + (localPath + dir.getName()).replace('\\', '/').replaceAll(" ", "%20") + "/" + "\"" + "<B>" + dir.getName() + "</B></A></TD>\n</TR>\n");
         }
 
         File[] files = resource.listFiles(new SubFiles());
         Arrays.sort(files, new SortByName());
 
-        for (int i = 0; i < files.length; i++) {
-            Date d = new Date(files[i].lastModified());
-            sb.append("<TR>\n<TD WIDTH = \"20%\">" + formatDate.format(d) + "</TD>\n<TD WIDTH = \"20%\">" + files[i].length() + "b</TD>\n<TD WIDTH = \"40%\"><A HREF=" + "\"http:/" + serverAndPort + (localPath + files[i].getName()).replace('\\', '/').replaceAll(" ", "%20") + "\"" + "<B>" + files[i].getName() + "</B></A></TD>\n</TR>\n");
+        for (File file : files) {
+            Date d = new Date(file.lastModified());
+            sb.append("<TR>\n<TD WIDTH = \"20%\">" + formatDate.format(d) + "</TD>\n<TD WIDTH = \"20%\">" + file.length() + "b</TD>\n<TD WIDTH = \"40%\"><A HREF=" + "\"http:/" + serverAndPort + (localPath + file.getName()).replace('\\', '/').replaceAll(" ", "%20") + "\"" + "<B>" + file.getName() + "</B></A></TD>\n</TR>\n");
         }
 
         sb.append("</TABLE>\n</PRE>\n<HR>\n</BODY>\n</HTML>\n");
@@ -146,11 +134,10 @@ public class Resource {
         byte[] result = sb.toString().getBytes();
 
         Date d = new Date();
-        this.contents = "Content-type: text/html\r\nContent-length: " + result.length + "\r\nLast-Modified: " + formatDate.format(d) + "\r\n\r\n";
+        this.contents = "Content-Type: text/html\r\nContent-Length: " + result.length + "\r\nLast-Modified: " + formatDate.format(d) + "\r\n\r\n";
 
-        return result;
+        return new DataInputStream(new ByteArrayInputStream(result));
     }
-
 }
 
 class SubDirs implements FileFilter {
