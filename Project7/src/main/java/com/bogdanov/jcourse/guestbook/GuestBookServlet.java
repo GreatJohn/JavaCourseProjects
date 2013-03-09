@@ -22,12 +22,21 @@ public class GuestBookServlet extends HttpServlet {
     private String message = "";
 
     @Override
+    public void init(){
+        try (Connection c = ds.getConnection();
+             Statement stmt = c.createStatement();) {
+            String createTable = "CREATE TABLE posts (ID INT PRIMARY KEY AUTO_INCREMENT, postMessage VARCHAR(255), postDate TIMESTAMP)";//create new table
+            stmt.execute(createTable);
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (Connection c = ds.getConnection();
-             Statement stmt = c.createStatement();
              PrintWriter out = resp.getWriter();) {
 
-            String createTable = "CREATE TABLE posts (ID INT PRIMARY KEY AUTO_INCREMENT, postMessage VARCHAR(255), postDate TIMESTAMP)";//create new table
+
             resp.setContentType("text/html");
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -48,11 +57,6 @@ public class GuestBookServlet extends HttpServlet {
             String add = req.getParameter("Add");
             if ((message == null) || (message.length() == 0)) {//first call
                 message = msg;
-                try {
-                    boolean b = stmt.execute(createTable);// try to create table
-                } catch (SQLException e) {
-                    //do nothing - table exist
-                }
             }
 
             GuestBookController gbc = new GuestBook(c);
@@ -72,8 +76,8 @@ public class GuestBookServlet extends HttpServlet {
             out.println("<table cellspacing=\"5\" width=\"100%\">");
             for (Record res : list) {
                 out.println("<tr>");
-                out.println("<td wigth=\"30%\" align=\"center\">" + res.postDate + "</td>");
-                out.println("<td wigth=\"70%\" align=\"left\">" + res.message + "</td>");
+                out.println("<td wigth=\"30%\" align=\"center\">" + res.getPostDate() + "</td>");
+                out.println("<td wigth=\"70%\" align=\"left\">" + res.getMessage() + "</td>");
                 out.println("</tr>");
             }
             out.println("</table>");
